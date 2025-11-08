@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.post('/create', authMiddleware.userAuth, notesController.create);
 router.put('/update/:id', authMiddleware.userAuth, notesController.update);
+router.delete('/delete/:id', authMiddleware.userAuth, notesController.deleteNote);
 
 export default router;
